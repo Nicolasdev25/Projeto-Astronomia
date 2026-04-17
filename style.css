@@ -4,8 +4,59 @@
   box-sizing: border-box;
 }
 
-#header-principal {
-  display: none;
+:root {
+  --bg-color: #05070a;
+  --main-color: #0d0f1e;
+  --text-color: #e0e6ed;
+  --buttom-destak-color: #7b61ff;
+  --card-bg: #0f172a;
 }
 
+.light-mode {
+  --bg-color: #f8fafc;
+  --text-color: #0f172a;
+  --buttom-destak-color: #5839ff;
+  --card-bg: #ffffff;
+}
 
+body {
+  background-color: var(--bg-color);
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Orbitron", sans-serif;
+}
+main {
+  background-color: var(--main-color);
+}
+#header-principal {
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+#theme-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
