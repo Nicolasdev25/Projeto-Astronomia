@@ -42,6 +42,11 @@ main {
   padding: 10px;
   width: 100%;
 }
+
+#header-principal h1 {
+  text-align: center;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -60,7 +65,6 @@ main {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
 /* seção home */
 
 #home {
@@ -70,12 +74,11 @@ main {
   flex-direction: column;
   padding: 70px;
   background-image: url(./assets/telescope-2.jpg);
-  background-size: cover; /* faz a imagem preencher tudo */
-  background-position: center; /* centraliza */
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100%;
-  margin-bottom: 20px;
-  background-repeat: no-repeat; /* evita repetir */
+  background-repeat: no-repeat;
 }
 
 #home h2 {
@@ -91,7 +94,7 @@ main {
   font-weight: bold;
   border-radius: 10px; /* obs tirar uma borda de cima*/
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: var(--buttom-destak-color);
   transition: transform 0.3s ease;
 }
 .botao-explore:hover {
@@ -102,6 +105,8 @@ main {
   text-align: center;
   margin-bottom: 10px;
 }
+
+/* grid e eventos*/
 
 .container-grid {
   display: grid;
@@ -139,4 +144,43 @@ main {
 }
 .card-conteudo h3 {
   margin-bottom: 1rem;
+}
+
+/* forumlario*/
+
+#assinar {
+  margin-top: 20px;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+}
+input {
+  border-radius: 8px;
+  border: transparent;
+}
+
+.botao-enviar {
+  margin-top: 10px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border-radius: 10px; /* obs tirar uma borda de cima*/
+  cursor: pointer;
+  background-color: var(--buttom-destak-color);
+  transition: transform 0.3s ease;
+}
+.botao-enviar:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+}
+
+section {
+  padding: 5%;
 }
