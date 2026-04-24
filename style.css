@@ -8,6 +8,7 @@ html {
 }
 
 :root {
+  --branco: #ffffff;
   --bg-color: #05070a;
   --main-color: #0d0f1e;
   --text-color: #e0e6ed;
@@ -54,12 +55,16 @@ main {
   z-index: 1000;
   background: var(--card-bg);
 }
-#header-principal h1 {
+.logo{
   font-size: 3rem;
 }
 .menu {
   display: flex;
+  font-family: "Orbitron";
   gap: 16px;
+  margin-left: auto;
+  align-items: center;
+  
 }
 
 .menu a {
@@ -67,6 +72,11 @@ main {
   padding: 8px 12px;
   color: var(--text-color);
   font-size: 26px;
+  transition: transform 0.3s ease ; 
+}
+.menu a:hover{
+  color: var(--buttom-destak-color);
+  transform: scale(1.1);
 }
 
 .hamburguer {
@@ -112,35 +122,40 @@ main {
 }
 /* seção home */
 
-#home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 70px;
-  background-image: url(./assets/telescope-2.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-}
+  #home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px;
+    background-image: url(./assets/telescope-3.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
 
 #home h2 {
+  letter-spacing: 2px;
+  font-weight: bold;
   line-height: 1.1;
   text-align: center;
   margin-bottom: 20px;
-  color: var(--text-color);
-  text-shadow: #05070a;
+  color: var(--branco);
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00FFFF, 0 0 30PX #00008B;
 }
 .botao-explore {
-  padding: 10px;
+  padding: 20px 50px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  border-radius: 10px; /* obs tirar uma borda de cima*/
+  border-radius: 10px;
   cursor: pointer;
-  background-color: var(--buttom-destak-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease;
+  color: var(--text-color);
 }
 .botao-explore:hover {
   transform: scale(1.1);
@@ -273,5 +288,8 @@ section {
 @media (min-width: 1024px) {
   .container-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  #home {
+    padding: 300px;
   }
 }
