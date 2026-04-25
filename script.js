@@ -9,3 +9,13 @@ hamburguer.addEventListener("click", () => {
     menu.style.display = "flex";
   }
 });
+
+const btn = document.getElementById("btn-tema");
+
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  btn.textContent = document.body.classList.contains("light-mode")
+    ? "☀️"
+    : "🌙";
+});

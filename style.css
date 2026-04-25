@@ -21,6 +21,8 @@ html {
   --text-color: #0f172a;
   --buttom-destak-color: #5839ff;
   --card-bg: #ffffff;
+  --header-bg: #ffffff;
+  --header-border: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -53,7 +55,8 @@ main {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--card-bg);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
 }
 .logo{
   font-size: 3rem;
@@ -95,31 +98,20 @@ main {
 #btn-tema {
   display: block;
   background: none;
-  border: none;
+  border: 1px solid var(--buttom-destak-color);
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: var(--text-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
-@media (max-width: 768px) {
-  .hamburguer {
-    display: flex;
-  }
-
-  .menu {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: var(--card-bg);
-    border: 1px solid var(--buttom-destak-color);
-    flex-direction: column;
-    padding: 16px;
-    border-radius: 8px;
-    display: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-  .menu a {
-    color: var(--text-color);
-  }
+.light-mode .menu a{
+  color: #0f172a;
 }
+.light-mode .menu a:hover{
+  color: var(--buttom-destak-color);
+}
+
 /* seção home */
 
   #home {
@@ -289,7 +281,32 @@ section {
   .container-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  #home {
-    padding: 300px;
+  #home { 
+  min-height: 100vh;
+  padding: 100px 20px;
+  background-size: cover;
+  background-position: center top;
+
+  }
+}
+@media (max-width: 768px) {
+  .hamburguer {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--buttom-destak-color);
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .menu a {
+    color: var(--text-color);
   }
 }
