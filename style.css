@@ -47,6 +47,7 @@ main {
 
 section {
   scroll-margin-top: 61px;
+   padding: 5%;
 }
 
 /* seção header*/
@@ -292,10 +293,6 @@ footer {
   padding: 40px 0;
   text-align: center;
   background-color: var(--card-bg);
-}
-
-section {
-  padding: 5%;
 }
 
 .btn-flutuante {
