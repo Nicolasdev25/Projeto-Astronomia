@@ -19,3 +19,14 @@ btn.addEventListener("click", () => {
     ? "☀️"
     : "🌙";
 });
+
+window.addEventListener('scroll', () => {
+    const btn = document.getElementById('btn-flutuante');
+    
+    // Se o usuário rolou mais de 300px, mostra o botão
+    if (window.scrollY > 300) {
+        btn.classList.add('mostrar');
+    } else {
+        btn.classList.remove('mostrar');
+    }
+});

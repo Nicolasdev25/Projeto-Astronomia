@@ -39,10 +39,14 @@ h3 {
   font-family: "Orbitron", sans-serif;
 }
 h2 {
-  font-size: 36px;
+  font-size: 1.5rem;
 }
 main {
   background-color: var(--main-color);
+}
+
+section {
+  scroll-margin-top: 61px;
 }
 
 /* seção header*/
@@ -55,11 +59,11 @@ main {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--header-bg);
+  background: var(--bg-color);
   border-bottom: 1px solid var(--header-border);
 }
-.logo{
-  font-size: 3rem;
+.logo {
+  font-size: 2rem;
 }
 .menu {
   display: flex;
@@ -67,7 +71,6 @@ main {
   gap: 16px;
   margin-left: auto;
   align-items: center;
-  
 }
 
 .menu a {
@@ -75,9 +78,9 @@ main {
   padding: 8px 12px;
   color: var(--text-color);
   font-size: 26px;
-  transition: transform 0.3s ease ; 
+  transition: transform 0.3s ease;
 }
-.menu a:hover{
+.menu a:hover {
   color: var(--buttom-destak-color);
   transform: scale(1.1);
 }
@@ -105,28 +108,28 @@ main {
   font-size: 1.5rem;
   cursor: pointer;
 }
-.light-mode .menu a{
+.light-mode .menu a {
   color: #0f172a;
 }
-.light-mode .menu a:hover{
+.light-mode .menu a:hover {
   color: var(--buttom-destak-color);
 }
 
 /* seção home */
 
-  #home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 70px;
-    background-image: url(./assets/telescope-3.png);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-  }
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 70px;
+  background-image: url(./assets/telescope-3.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
 
 #home h2 {
   letter-spacing: 2px;
@@ -135,7 +138,10 @@ main {
   text-align: center;
   margin-bottom: 20px;
   color: var(--branco);
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00FFFF, 0 0 30PX #00008B;
+  text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 30px #00008b;
 }
 .botao-explore {
   padding: 20px 50px;
@@ -211,12 +217,14 @@ main {
   margin-bottom: 10px;
 }
 .btn-saiba-mais {
+  border: none;
   margin-top: 10px;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  border-radius: 10px; /* obs tirar uma borda de cima*/
+  border-radius: 10px;
   cursor: pointer;
+  color: var(--branco);
   background-color: var(--buttom-destak-color);
   transition: transform 0.3s ease;
 }
@@ -226,43 +234,119 @@ main {
 /* forumlario*/
 
 #assinar {
-  margin-top: 20px;
+  margin: 40px 15px;
   background-color: var(--card-bg);
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  border: 2px solid var(--buttom-destak-color);
+  margin: 40px auto;
+
+  text-align: center;
+}
+
+#assinar form {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding: 15px;
-  border-radius: 8px;
+  gap: 15px;
+  text-align: left;
 }
-input {
-  border-radius: 8px;
-  border: transparent;
+
+#assinar label {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9rem;
+}
+
+#assinar input {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #0d0f1e;
+  border: 1px solid var(--buttom-destak-color);
+  color: var(--text-color);
+  font-family: "Montserrat", sans-serif;
+}
+
+#assinar input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(123, 97, 255, 0.3);
 }
 
 .botao-enviar {
-  margin-top: 10px;
-  padding: 10px;
+  padding: 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  border-radius: 10px; /* obs tirar uma borda de cima*/
+  border-radius: 10px;
   cursor: pointer;
   background-color: var(--buttom-destak-color);
+  color: white;
+  border: none;
   transition: transform 0.3s ease;
 }
+
 .botao-enviar:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 footer {
   padding: 40px 0;
   text-align: center;
+  background-color: var(--card-bg);
 }
 
 section {
   padding: 5%;
 }
 
-/* media */
+.btn-flutuante {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--buttom-destak-color);
+    color: var(--bg-color);
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: transform 0.3s, opacity 0.5s;
+    opacity: 0; 
+    visibility: hidden; 
+    max-width: 200px;
+    text-align: center;
+    animation: pulsar 2s ease-in-out infinite; 
+}
+
+
+.btn-flutuante.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-flutuante:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1); 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    }
+    50% {
+        transform: scale(1.1); /* Cresce 10% */
+        box-shadow: 0 4px 25px rgba(123, 97, 255, 0.5); 
+    }
+    100% {
+        transform: scale(1); 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    }
+}
+
+
+
+/* media  queries*/
 @media (min-width: 769px) {
   .container-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -279,16 +363,28 @@ section {
 
 @media (min-width: 1024px) {
   .container-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-  #home { 
-  min-height: 100vh;
-  padding: 100px 20px;
-  background-size: cover;
-  background-position: center top;
-
+  #home {
+    min-height: 100vh;
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center top;
+  }
+  #assinar {
+    max-width: 800px;
+    padding: 60px;
   }
 }
+
+#noticias p {
+  font-size: 15px;
+}
+
+#home h2 {
+  font-size: 3rem;
+}
+
 @media (max-width: 768px) {
   .hamburguer {
     display: flex;
