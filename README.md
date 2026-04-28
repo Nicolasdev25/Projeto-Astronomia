@@ -20,7 +20,8 @@ Este projeto foi desenvolvido como parte da transição para uma carreira como d
 - **Performance:** Otimização de carregamento de recursos e organização de arquivos.
 
 ## 🎨 Visualização
-*(Aqui você pode adicionar um print do seu site)*
+<img width="351" height="930" alt="image" src="https://github.com/user-attachments/assets/85a82f37-8e19-4840-8e06-98425989ac50" />
+
 ## 📂 Estrutura do Repositório
 ```bash
 astro-obs/
