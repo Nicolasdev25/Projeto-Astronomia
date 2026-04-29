@@ -47,7 +47,10 @@ main {
 
 section {
   scroll-margin-top: 61px;
-   padding: 5%;
+  padding: 5%;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /* seção header*/
@@ -296,52 +299,51 @@ footer {
 }
 
 .btn-flutuante {
-    position: fixed; /* Fixa o botão na tela */
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--buttom-destak-color);
-    color: var(--bg-color);
-    padding: 15px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-family: "Orbitron", sans-serif;
-    font-size: 0.8rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    transition: transform 0.3s, opacity 0.5s;
-    opacity: 0; 
-    visibility: hidden; 
-    max-width: 200px;
-    text-align: center;
-    animation: pulsar 2s ease-in-out infinite; 
+  position: fixed; /* Fixa o botão na tela */
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--buttom-destak-color);
+  color: var(--bg-color);
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition:
+    transform 0.3s,
+    opacity 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  max-width: 200px;
+  text-align: center;
+  animation: pulsar 2s ease-in-out infinite;
 }
 
-
 .btn-flutuante.mostrar {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .btn-flutuante:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 @keyframes pulsar {
-    0% {
-        transform: scale(1); 
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
-    }
-    50% {
-        transform: scale(1.1); /* Cresce 10% */
-        box-shadow: 0 4px 25px rgba(123, 97, 255, 0.5); 
-    }
-    100% {
-        transform: scale(1); 
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
-    }
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.1); /* Cresce 10% */
+    box-shadow: 0 4px 25px rgba(123, 97, 255, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
 }
-
-
 
 /* media  queries*/
 @media (min-width: 769px) {
@@ -362,6 +364,9 @@ footer {
   .container-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  html {
+    scroll-behavior: smooth;
+  }
   #home {
     min-height: 100vh;
     padding: 100px 20px;
@@ -369,6 +374,7 @@ footer {
     background-position: center top;
   }
   #assinar {
+    display: grid;
     max-width: 800px;
     padding: 60px;
   }
